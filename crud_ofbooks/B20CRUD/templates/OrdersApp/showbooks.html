@@ -1,0 +1,42 @@
+{% extends 'OrdersApp/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}
+    <title>Show Book</title>
+{% endblock %}
+
+{% block content %}
+   <table class="table table-dark">
+         <tr>
+             <th>bookname</th>
+             <th>pages</th>
+             <th>quantity</th>
+             <th>price</th>
+             
+         </tr>
+        {% for product in pro %}
+         <tr>
+             <td>{{product.bookname}}</td>
+             <td>{{product.pages}}</td>
+             <td>{{product.quantity}}</td>
+             <td>{{product.price}}</td>
+             
+
+             <td>
+                 <a href="{% url 'updatebook' product.id %}">
+                     <button class="btn btn-warning">
+                         Update
+                     </button>
+                 </a>
+             </td>
+             <td><a href="{% url 'deletebook' product.id %}"><button class="btn btn-danger">Delete</button></a></td>
+         </tr>
+        {% endfor %}
+        
+
+   </table>
+     <br><br>
+     <a href="{% url 'addbook' %}">
+         <button class="btn btn-success">Add Books</button>
+     </a>
+{% endblock %}

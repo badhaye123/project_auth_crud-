@@ -1,0 +1,51 @@
+.my_navbar
+{
+   background-color: mediumspringgreen;
+   list-style-type: none;
+   overflow: hidden;
+}
+body
+{
+background-color:light blue
+}
+
+li
+{
+   float: left;
+}
+
+li a
+{
+   display: block;
+   color: black;
+   text-decoration: none;
+   padding: 15px 15px 15px 10px;
+}
+
+li a:hover
+{
+   background-color: orange;
+}
+
+header h1
+{
+
+   text-align: center;
+   color:blue;
+
+}
+
+Footer h5
+{
+   background-color: gray;
+   text-align: center;
+   padding: 15px 15px 15px 10px
+}
+
+
+
+
+body  {
+  background-image: url("paper.gif");
+  background-color: #cccccc;
+  }
